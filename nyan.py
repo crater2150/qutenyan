@@ -1,4 +1,5 @@
 
+import os
 
 from PyQt5.QtCore import pyqtSlot, QSize
 from PyQt5.QtWidgets import QSlider
@@ -18,27 +19,33 @@ class NyanPercentage(QSlider):
 		self.set_perc(0, 0)
 		self.raw = False
 		self.setOrientation(QtCore.Qt.Horizontal)
+
+		dir_path = os.path.dirname(os.path.realpath(__file__))
+		nyan_img_path = os.path.join(dir_path, "./img/nyan.svg")
+		nyan_rainbow_path = os.path.join(dir_path, "./img/rainbow.svg")
+
 		self.setStyleSheet("""
-			QSlider::groove {
+			QSlider::groove {{
 				border: 1px none;
 				height: 16px;
 				margin: 0 12px;
-			}
+			}}
 
-			QSlider::sub-page:horizontal {
-				border-image: url(./img/rainbow.svg);
-			}
+			QSlider::sub-page:horizontal {{
+				border-image: url({});
+			}}
 
-			QSlider::handle:horizontal {
-				image: url(./img/nyan.svg);
+			QSlider::handle:horizontal {{
+				image: url({});
 				width: 30px;
 				margin: -24px -12px;
-			}
+			}}
 
-			QTSlider::sub-page:horizontal {
+			QTSlider::sub-page:horizontal {{
 				background: #0000FF;
-			}
-        """)
+			}}
+        """.format(nyan_rainbow_path, nyan_img_path))
+
 		self.setMaximumWidth(150)
 
 	@pyqtSlot(int, int)
