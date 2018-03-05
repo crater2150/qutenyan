@@ -18,13 +18,14 @@
 
 import os
 
-from PyQt5.QtCore import pyqtSlot, QSize
+from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QSlider
 from PyQt5 import QtCore
 
 from qutebrowser.mainwindow.statusbar import percentage
 
-NYAN_WIDTH=150
+NYAN_WIDTH = 150
+
 
 class NyanPercentage(QSlider):
 
