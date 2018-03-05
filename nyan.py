@@ -24,7 +24,7 @@ from PyQt5 import QtCore
 
 from qutebrowser.mainwindow.statusbar import percentage
 
-NYAN_MAX_WIDTH=150
+NYAN_WIDTH=150
 
 class NyanPercentage(QSlider):
 
@@ -71,7 +71,8 @@ class NyanPercentage(QSlider):
 			}}
         """.format(nyan_rainbow_path, nyan_img_path))
 
-		self.setMaximumWidth(150)
+		self.setMaximumWidth(NYAN_WIDTH)
+		self.setMinimumWidth(NYAN_WIDTH)
 
 		self.valueChanged.connect(self.val_changed)
 		self.sliderPressed.connect(self.pressed_slot)

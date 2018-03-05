@@ -35,7 +35,7 @@ instead (so it should work on a default installation).
 
 * Configuration
 
-Right now, there's only one configuration option, a ~NYAN_MAX_WIDTH~ constant at
+Right now, there's only one configuration option, a ~NYAN_WIDTH~ constant at
 the top of the file. If you have a better idea for how to expose configuration
 options (or options you want exposed), please let me know.
 
