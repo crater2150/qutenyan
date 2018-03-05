@@ -26,6 +26,11 @@ instead (so it should work on a default installation).
 1. Clone this repo into your configuration directory
    - See [[http://qutebrowser.org/doc/help/configuring.html][the configuration docs for more information]]. The directory can be
      found in the output of ~:version~.
+     #+BEGIN_SRC sh
+       git clone https://github.com/jgkamat/qutenyan.git ~/.config/qutebrowser/qutenyan
+     #+END_SRC
+
+   - If you manage your config with git, you should add a submodule to this repo instead.
 2. Add this line to your ~config.py~
    #+BEGIN_SRC python
      # point this to where you cloned qutenyan
