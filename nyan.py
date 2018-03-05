@@ -69,7 +69,7 @@ class NyanPercentage(QSlider):
 			QTSlider::sub-page:horizontal {{
 				background: #0000FF;
 			}}
-        """.format(nyan_rainbow_path, nyan_img_path))
+		""".format(nyan_rainbow_path, nyan_img_path))
 
 		self.setMaximumWidth(150)
 
